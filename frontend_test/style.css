@@ -23,7 +23,7 @@ input {
     border: 1px solid aqua;
     margin-top: 50px;
     margin-bottom: 25px;
-    width: 90%;
+    width: 90vw;
     height: 28px;
 }
 
@@ -41,7 +41,7 @@ input {
 }
 
 .grid{
-   width: 90%;
+   width: 90vw;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    row-gap: 2vw;
