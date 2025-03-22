@@ -1,0 +1,402 @@
+* {
+padding: 0;
+margin: 0;
+}
+
+input {
+    outline: none;
+    border: none;
+    background: transparent;
+    padding-left: 10px;
+    width: 100%;
+    position: relative;  
+}
+
+.search {
+    display: flex;
+    border-radius: 15px;
+    border: 1px solid aqua;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    width: 90%;
+    height: 28px;
+}
+
+.search > img{
+    padding: 5px 12px;
+       position: relative;
+       right: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+   width: 90%;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   row-gap: 2vw;
+   column-gap: 2vw;
+}
+
+ .element{
+     display: flex;
+     width: 28.4vw;
+     /* min-height: 314px; */
+     height: 25vw;
+     flex-direction: column;
+     border-radius: 13px;
+     box-shadow: 1px 1px 14px rgba(0,0,0,0.1);
+     /* padding: 10px; */
+     font-family: proxima-nova, sans-serif;
+     cursor: pointer;
+ }
+
+ .imgphone{
+  display: flex;
+  align-items: center;
+  color: rgba(129, 137, 163, 1);
+  font-size: 1.2vw;
+  font-weight: 400px;
+  padding-bottom: 1vw;
+ }
+
+ .imgpochta{
+  display: flex;
+  align-items: center;
+  color: rgba(129, 137, 163, 1);
+  font-size: 1.2vw;
+  font-weight: 400px;
+  word-wrap: break-word;
+  /* position: relative; */
+ }
+
+ .imgphone,.imgpochta,.name{
+   padding-left: 2.5vw;
+ }
+
+ .imgphone > img{
+width: 2vw;
+height: 2vw;
+ }
+
+ .imgpochta > img{
+   width: 2vw;
+   height: 2vw;
+ }
+
+ .name{
+    padding: 2vw;
+    font-size: 1.8vw;
+    font-weight: 700;
+ }
+
+ .phone_txt,.pochta_txt{
+    padding-left: 1.5vw;
+ }
+
+ /* .pochta_txt{
+  height: 6vw;;
+  width: 25vw;
+  position: absolute;
+  top: 0.4vw;
+  left: 7.5vw;
+ } */
+
+ /* .divspan{
+  height: 6vw;;
+  width: 31vw;
+  position: absolute;
+  top: 0.4vw;
+  left: 7.5vw;
+  word-wrap: break-word;
+ } */
+ 
+ .overlay {
+    position: fixed; /* Positioning and size */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128,128,128,0.5); /* color */
+    display: block; /* making it hidden by default */
+    cursor: pointer;
+  }
+
+ .popup{
+   display: flex;
+   flex-direction: row;
+   position: fixed;
+   width: 34vw;
+   height: 35.6vw;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: 16px;
+   flex-wrap: wrap;
+   align-content: flex-start;
+   padding: 2.5vw;
+   box-shadow: 1px 1px 14px rgba(0,0,0,0.1);
+   background-color: white;
+   padding-bottom: 0px;
+   font-family: proxima-nova, sans-serif;
+   /* z-index: -2; */
+   cursor:default;
+}
+
+.overlay_popup{
+   display: none;
+}
+
+.active{
+   display: block;
+   /* z-index: 100; */
+}
+
+ .form{
+   width: 13.2vw;
+   height: 1.7vw;
+   padding-bottom: 1.5vw;
+   font-size: 1.3vw;
+ }
+
+  .value{
+   width: 20.8vw;
+   height: 1.7vw;
+   padding-bottom: 1.5vw;
+   color: rgba(129, 137, 163, 1);
+   font-size: 1.2vw;
+ }
+
+ .name1{
+   width: 31vw;
+   height: 1.7vw;
+   font-weight: 700;
+   font-size: 1.8vw;
+   padding-bottom: 3.4vw;
+ }
+
+ .img_clouse{
+   width: 3vw;
+   height: 1.7vw;
+   padding-bottom: 0;
+   cursor: pointer;
+   /* z-index: -1; */
+ }
+ .optional_info{
+   width: 34vw;
+   height: 1.7vw;
+   padding-top: 3.5vw;
+   padding-bottom: 1.5vw;
+ }
+
+ .optional_info_value{
+   width: 34vw;
+   height: 1.7vw;
+   font-size: 1.2vw;
+   color: rgba(129, 137, 163, 1);
+ }
+
+ @media (max-width: 780px) {
+   
+   .grid {
+       grid-template-columns: repeat(2,1fr);
+   }
+
+  .element{
+   width: 44vw;
+   height: 37vw;
+  }
+
+  .name{
+   padding: 4vw;
+   font-size: 2.8vw;
+   font-weight: 700;
+}
+
+.imgphone > img{
+   width: 3.5vw;
+   height: 3.5vw;
+    }
+   
+    .imgpochta > img{
+      width: 3.5vw;
+      height: 3.5vw;
+    }
+
+.phone_txt,.pochta_txt{
+   padding-left: 3vw;
+   font-size: 2vw;
+}
+
+.imgphone{
+   padding-bottom: 2vw;
+}
+
+.imgphone,.imgpochta,.name{
+   padding-left: 4vw;
+ }
+
+ .popup{
+   width: 48vw;
+   height: 49.6vw;
+   top: 50%;
+   left: 50%;
+   padding: 3vw;
+   padding-bottom: 0px;
+}
+
+ .form{
+   width: 18vw;
+   height: 2.8vw;
+   padding-bottom: 1.5vw;
+   font-size: 1.9vw;
+ }
+
+  .value{
+   width: 30vw;
+   height: 2.8vw;
+   padding-bottom: 1.5vw;
+   color: rgba(129, 137, 163, 1);
+   font-size: 1.8vw;
+ }
+
+ .name1{
+   width: 45vw;
+   height: 2.5vw;
+   font-weight: 700;
+   font-size: 2.9vw;
+   padding-bottom: 4.5vw;
+ }
+
+ .img_clouse{
+   width: 3vw;
+   height: 2.5vw;
+   padding-bottom: 0;
+ }
+ .optional_info{
+   width: 48vw;
+   height: 2.5vw;
+   padding-top: 4.5vw;
+   padding-bottom: 1.5vw;
+ }
+
+ .optional_info_value{
+   width: 48vw;
+   height: 5vw;
+   font-size: 1.8vw;
+   color: rgba(129, 137, 163, 1);
+ }
+
+}
+@media (max-width: 480px) {
+   
+   .grid {
+       grid-template-columns: repeat(1,1fr);
+   }
+
+   .element{
+      width: 90vw;
+      height: 75vw;
+     }
+   
+     .name{
+      padding: 6.5vw;
+      font-size: 5.8vw;
+      font-weight: 700;
+   }
+   
+   .imgphone > img{
+      width: 6vw;
+      height: 6vw;
+       }
+      
+       .imgpochta > img{
+         width: 6vw;
+         height: 6vw;
+       }
+   
+   .phone_txt,.pochta_txt{
+      padding-left: 4vw;
+      font-size: 3.5vw;
+   }
+   
+   .imgphone{
+      padding-bottom: 4vw;
+   }
+   
+   .imgphone,.imgpochta,.name{
+      padding-left: 7vw;
+    }
+
+    .popup{
+      width: 79vw;
+      height: 80.6vw;
+      top: 50%;
+      left: 50%;
+      padding: 6vw;
+      padding-bottom: 0px;
+   }
+   
+    .form{
+      width: 30vw;
+      height: 6vw;
+      padding-bottom: 1.5vw;
+      font-size: 3.8vw;
+    }
+   
+     .value{
+      width: 49vw;
+      height: 6vw;
+      padding-bottom: 1.5vw;
+      color: rgba(129, 137, 163, 1);
+      font-size: 3.7vw;
+    }
+   
+    .name1{
+      width: 73vw;
+      height: 5vw;
+      font-weight: 700;
+      font-size: 5.5vw;
+      padding-bottom: 4.5vw;
+    }
+   
+    .img_clouse{
+      width: 5vw;
+      height: 5vw;
+      padding-bottom: 0;
+    }
+    .optional_info{
+      width: 79vw;
+      height: 2.5vw;
+      padding-top: 4.5vw;
+      padding-bottom: 4vw;
+    }
+   
+    .optional_info_value{
+      width: 79vw;
+      height: 5vw;
+      font-size: 3.7vw;
+      color: rgba(129, 137, 163, 1);
+    }
+
+}
+
+
+/* #outer {
+   width: 100px;
+   height:200px;
+   position:relative;
+   background-color:red;
+}
+#inner {
+   width:200px;
+   height:inherit;
+   position:absolute;
+   left:100%;
+   background-color:green;
+} */
