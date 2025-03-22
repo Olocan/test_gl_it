@@ -3,6 +3,11 @@ padding: 0;
 margin: 0;
 }
 
+html {
+  margin-right: calc(-1 * (100vw - 100%));
+  overflow-x: hidden;
+}
+
 input {
     outline: none;
     border: none;
